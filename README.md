@@ -87,7 +87,7 @@ Ví dụ:
 
 Quy tắc thu thập comment:
 
-* Tối đa 3 trang comment cho mỗi video.
+* Tối đa 2 trang comment cho mỗi video.
 * Mỗi trang tối đa 100 comments.
 * Chỉ lấy top-level comments.
 * Không lấy chi tiết từng reply.
