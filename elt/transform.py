@@ -1,4 +1,4 @@
-import config
+from . import config
 import logging
 
 from google.cloud import bigquery

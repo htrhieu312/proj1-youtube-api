@@ -1,5 +1,5 @@
 import pandas as pd
-import config
+from . import config
 import logging
 
 from datetime import date, datetime, timezone

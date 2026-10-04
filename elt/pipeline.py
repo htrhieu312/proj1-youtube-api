@@ -1,9 +1,9 @@
 import logging
 
 from datetime import datetime
-from extract import extract
-from load import load
-from transform import transform
+from .extract import extract
+from .load import load
+from .transform import transform
 
 logger = logging.getLogger(__name__)
 

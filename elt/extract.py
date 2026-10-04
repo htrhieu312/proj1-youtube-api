@@ -3,7 +3,7 @@ import logging
 import requests
 import time
 import pandas as pd 
-import config
+from . import config
 
 from dotenv import load_dotenv
 from googleapiclient.discovery import build
@@ -90,13 +90,8 @@ def get_uploads_playlist_id(channel_id):
         id=channel_id
     )
 
-    try:
-        response = execute_with_retry(request, f"Get channel {channel_id}")
+    response = execute_with_retry(request, f"Get channel {channel_id}")
 
-    except HttpError as e:
-        logger.error("Failed to get channel %s: %s", channel_id, e)
-
-        return None
 
     items = response.get("items", [])
 
@@ -416,7 +411,7 @@ def extract():
                 e
             )
 
-            raise
+            continue
 
         except Exception as e:
 
@@ -424,7 +419,7 @@ def extract():
                 "Unexpected error for artist %s: %s",
                 artist_name,
                 e
-            )
+            )   
 
             continue
 
