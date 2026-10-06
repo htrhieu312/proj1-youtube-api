@@ -227,7 +227,7 @@ Pipeline được triển khai trên Google Cloud VM và chạy tự động 2 l
 
 ```text
 07:00
-19:00
+23:00
 ```
 
 Cron sử dụng `run.sh` để khởi chạy pipeline.
@@ -236,7 +236,7 @@ Ví dụ:
 
 ```cron
 0 7 * * * /home/user/big_proj_1/run.sh
-0 19 * * * /home/user/big_proj_1/run.sh
+0 23 * * * /home/user/big_proj_1/run.sh
 ```
 
 ### Security
